@@ -52,5 +52,19 @@ void gridInit(Grid *g) {
     }
   }
 
+
+    /* =========================================================================
+   * PEC (Perfect Electric Conductor) PLATE INSERTION
+   * Set Ez update coefficients to 0 along a vertical line.
+   * ========================================================================= */
+#if 1  /* CHANGE TO 0 TO ROLL BACK TO FREE-SPACE GRID (NO PEC) */
+  mm = 20;  // Offset 20 cells from the left side
+  for (nn = 20; nn <= SizeY - 20; nn++) { // Span from 20 cells off bottom to 20 off top
+    Ceze(mm, nn) = 0.0;
+    Cezh(mm, nn) = 0.0;
+  }
+#endif
+
+
   return;
 }

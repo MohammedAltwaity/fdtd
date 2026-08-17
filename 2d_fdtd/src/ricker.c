@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include "fdtd-macro-tmz.h"
-#include "ezInc2.h"
+#include "ezinc.h"
 
 static double cdtds, ppw = 0;
 
