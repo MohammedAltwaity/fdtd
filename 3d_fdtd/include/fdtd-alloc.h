@@ -24,14 +24,15 @@
   }
 
 
-  #define ALLOC_3D(PNTR, NUMX, NUMY, NUMZ, TYPE) \
+
+#define ALLOC_3D(PNTR, NUMX, NUMY, NUMZ, TYPE) \
     PNTR = (TYPE *)calloc((NUMX) * (NUMY) * (NUMZ), sizeof(TYPE)); \
     if (!PNTR) { \
         perror("ALLOC_3D"); \
         fprintf(stderr, \
             "Allocation failed for " #PNTR ". Terminating...\n"); \
         exit(-1); \
-        
     }
+
 
 #endif

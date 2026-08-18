@@ -78,6 +78,12 @@ In the TFSF module, the 1D auxiliary grid injects a uniform plane wave traveling
 │   ├── include/
 │   ├── src/
 │   └── plot_data.py
+    ├── 3d_fdtd_with_tfsf/       # 3D grid simualion
+│   ├
+│   │ 
+│   ├── include/
+│   ├── src/
+│   └── plot_data.py
 ├── .gitignore
 └── README.md
 
