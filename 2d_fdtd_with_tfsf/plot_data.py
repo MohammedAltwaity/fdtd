@@ -12,6 +12,12 @@ from matplotlib.animation import FuncAnimation
 SHOW_TFSF = True       # Toggle TFSF boundary rectangle
 SHOW_PEC  = True       # Toggle PEC plate line
 
+# GIF Export Configuration
+SAVE_GIF     = False                  # Set to True to save animation as a GIF file
+GIF_FILENAME = "images/fdtd_simulation.gif"  # Output GIF filename
+GIF_FPS      = 10                    # Frames per second for playback
+GIF_DPI      = 100                   # Resolution (100 is standard for web/GitHub)
+
 # Fixed Colorbar Bounds (Prevents zooming into 0.0001 numerical noise)
 COLOR_MIN = -0.5
 COLOR_MAX = 0.5
@@ -64,7 +70,7 @@ def main():
     file_tuples.sort(key=lambda x: x[0])
     files = [t[1] for t in file_tuples]
     
-    print(f"Found {len(files)} frames. Displaying animation...")
+    print(f"Found {len(files)} frames. Preparing animation...")
     first_field, nx, ny = load_frame(files[0])
     
     fig, ax = plt.subplots(figsize=(8, 6))
@@ -142,6 +148,15 @@ def main():
     )
     
     plt.tight_layout()
+
+    # --------------------------------------------------------------------------
+    # OPTIONAL GIF EXPORT
+    # --------------------------------------------------------------------------
+    if SAVE_GIF:
+        print(f"Saving animation to '{GIF_FILENAME}'...")
+        anim.save(GIF_FILENAME, writer='pillow', fps=GIF_FPS, dpi=GIF_DPI)
+        print("GIF export complete!")
+
     plt.show()
 
 if __name__ == '__main__':
