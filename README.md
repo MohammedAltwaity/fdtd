@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/Status-In_Active_Development-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 
-A high-performance computational electromagnetics framework developed in C based on John B. Schneider’s FDTD architecture, featuring automated binary snapshot generation and a Python visualization pipeline.
+A high-performance computational electromagnetics framework developed in C.
 
 This repository currently implements the **2D $\text{TM}_z$ core simulation module**, serving as the foundation for an expanding electromagnetic solver built to analyze plane wave scattering, boundary conditions, and complex target geometries.
 
@@ -80,3 +80,8 @@ In the TFSF module, the 1D auxiliary grid injects a uniform plane wave traveling
 │   └── plot_data.py
 ├── .gitignore
 └── README.md
+
+
+## referemces
+
+Understanding the Finite-Difference Time-Domain Method, John B. Schneider, www.eecs.wsu.edu/~schneidj/ufdtd, 2010
