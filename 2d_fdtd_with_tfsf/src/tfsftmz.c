@@ -3,6 +3,7 @@
 #include "fdtd-proto2.h"
 #include "fdtd-alloc1.h"
 #include "ezinc.h"
+#include "config.h"
 
 static int firstX = 0, firstY, // indices for first point in TF region 
            lastX, lastY;       // indices for last point in TF region  
@@ -17,10 +18,22 @@ void tfsfInit(Grid *g) {
   gridInit1d(g1);              // initialize 1d grid, and also sets its type ******
 
   printf("Grid is %d by %d cell.\n", SizeX, SizeY);
-  printf("Enter indices for first point in TF region: ");
-  scanf(" %d %d", &firstX, &firstY);
-  printf("Enter indices for last point in TF region: ");
-  scanf(" %d %d", &lastX, &lastY);
+
+
+  // printf("Enter indices for first point in TF region: ");
+  // scanf(" %d %d", &firstX, &firstY);
+
+  firstX = TF_FIRST_NODE_X;
+  firstY = TF_FIRST_NODE_Y;
+
+
+
+  // printf("Enter indices for last point in TF region: ");
+  // scanf(" %d %d", &lastX, &lastY);
+  lastX = TF_LAST_NODE_X;
+  lastY = TF_LAST_NODE_Y;
+
+
 
   ezIncInit(g); // initialize source function
 

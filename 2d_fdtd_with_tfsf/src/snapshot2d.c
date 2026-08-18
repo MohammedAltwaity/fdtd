@@ -1,36 +1,70 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "fdtd-macro-tmz.h"
+#include "config.h"
 
 static int temporalStride = -2, frame = 0, startTime,
   startNodeX, endNodeX, spatialStrideX,
   startNodeY, endNodeY, spatialStrideY;
-static char basename[80];
+
+  //initializing the base name instead of promping the user
+static char basename[80] = "sim";
 
 void snapshotInit2d(Grid *g) {
   
   int choice;
   
-  printf("Do you want 2D snapshots? (1=yes, 0=no) ");
-  scanf("%d", &choice);
+  // printf("Do you want 2D snapshots? (1=yes, 0=no) ");
+  // scanf("%d", &choice);
+  choice = CHOICE;
+
+
   if (choice == 0) {
     temporalStride = -1;
     return;
   }
 
-  printf("Duration of simulation is %d steps.\n", MaxTime);
-  printf("Enter start time and temporal stride: ");
-  scanf(" %d %d", &startTime, &temporalStride);
+  printf("Duration of simulation is %d steps.\n\n", MaxTime);
+
   printf("In x direction grid has %d total nodes"
         " (ranging from 0 to %d).\n", SizeX, SizeX - 1);
-  printf("Enter first node, last node, and spatial stride: ");
-  scanf(" %d %d %d", &startNodeX, &endNodeX, &spatialStrideX);
-  printf("In y direction grid has %d total nodes"
-        " (ranging from 0 to %d).\n", SizeY, SizeY - 1);
-  printf("Enter first node, last node, and spatial stride: ");
-  scanf(" %d %d %d", &startNodeY, &endNodeY, &spatialStrideY);
-  printf("Enter the base name: ");
-  scanf(" %s", basename);
+
+  // printf("Enter start time and temporal stride: ");
+  // scanf(" %d %d", &startTime, &temporalStride);
+
+
+  startTime = START_TIME;
+  temporalStride = TEMPORAL_STRIDE;
+
+
+  // printf("In x direction grid has %d total nodes"
+  //       " (ranging from 0 to %d).\n", SizeX, SizeX - 1);
+
+  // printf("Enter first node, last node, and spatial stride: ");
+  // scanf(" %d %d %d", &startNodeX, &endNodeX, &spatialStrideX);
+
+  startNodeX = XFIRST_NODE;
+  endNodeX = XLAST_NODE;
+  spatialStrideX = XSPACIAL_STRIDE;
+  
+
+
+  // printf("In y direction grid has %d total nodes"
+  //       " (ranging from 0 to %d).\n", SizeY, SizeY - 1);
+  // printf("Enter first node, last node, and spatial stride: ");
+  // scanf(" %d %d %d", &startNodeY, &endNodeY, &spatialStrideY);
+
+   startNodeY = YFIRST_NODE;
+   endNodeY = YLAST_NODE;
+   spatialStrideY = YSPACIAL_STRIDE;
+
+
+
+  // printf("Enter the base name: ");
+  // scanf(" %s", basename);
+ 
+
+  
 
   return;
 }

@@ -2,6 +2,7 @@
 #include "fdtd-macro-tmz.h"
 #include "fdtd-alloc1.h"
 #include "fdtd-proto1.h"
+#include "config.h"
 
 // This is from the page 196 Schneider book
 
@@ -58,8 +59,12 @@ void gridInit(Grid *g) {
    * Set Ez update coefficients to 0 along a vertical line.
    * ========================================================================= */
 #if 1  /* CHANGE TO 0 TO ROLL BACK TO FREE-SPACE GRID (NO PEC) */
-  mm = 20;  // Offset 20 cells from the left side
-  for (nn = 20; nn <= SizeY - 20; nn++) { // Span from 20 cells off bottom to 20 off top
+  /* Center X inside the Total Field box: (40 + 75) / 2 = 57 */
+  mm = (TF_FIRST_NODE_X + TF_LAST_NODE_X) / 2; 
+
+  /* Span Y inside the Total Field box with a 5-cell margin off the TF boundary */
+  int margin_y = 5; 
+  for (nn = TF_FIRST_NODE_Y + margin_y; nn <= TF_LAST_NODE_Y - margin_y; nn++) { 
     Ceze(mm, nn) = 0.0;
     Cezh(mm, nn) = 0.0;
   }

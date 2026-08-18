@@ -3,13 +3,18 @@
 #include <math.h>
 #include "fdtd-macro-tmz.h"
 #include "ezinc.h"
+#include "config.h"
 
 static double cdtds, ppw = 0;
 
 /* initialize source-function variables */
 void ezIncInit(Grid *g) {
-  printf("Enter the points per wavelength for Ricker source: ");
-  scanf(" %lf", &ppw);
+
+  // printf("Enter the points per wavelength for Ricker source: ");
+  // scanf(" %lf", &ppw);
+
+  ppw = PPW;
+
   cdtds = Cdtds;
   return;
 }
