@@ -1,0 +1,4 @@
+the program execuion is done using the terminal with any test editor
+To compile with GCC, run: gcc -Iinclude src/*.c -o result
+
+then call the plotter for visualizaion using python
