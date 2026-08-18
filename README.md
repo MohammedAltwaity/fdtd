@@ -1,9 +1,9 @@
 # Electromagnetic FDTD Simulation Engine
 
-![C Language](https://img.shields.io/badge/Language-C-blue.svg)
+<!-- ![C Language](https://img.shields.io/badge/Language-C-blue.svg)
 ![Python](https://img.shields.io/badge/Visualization-Python_3.x-green.svg)
 ![Status](https://img.shields.io/badge/Status-In_Active_Development-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+![License](https://img.shields.io/badge/License-MIT-brightgreen.svg) -->
 
 A high-performance computational electromagnetics framework developed in C.
 
