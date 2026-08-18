@@ -16,14 +16,14 @@ This repository currently implements the **2D $\text{TM}_z$ core simulation modu
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="./2d_fdtd/images/fdtd_simulation.gif" alt="FDTD Resonator Simulation" width="100%"/>
+      <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO_NAME/main/2d_fdtd/images/fdtd_simulation.gif" alt="FDTD Resonator Simulation" width="100%"/>
       <br />
       <b>2D Resonator Mode</b>
       <br />
       <i>Point source pulse injected in grid center with surrounding PEC boundaries acting as a resonant cavity.</i>
     </td>
     <td align="center" width="50%">
-      <img src="./2d_fdtd_with_tfsf/images/fdtd_simulation.gif" alt="FDTD TFSF Wave Scattering" width="100%"/>
+      <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO_NAME/main/2d_fdtd_with_tfsf/images/fdtd_simulation.gif" alt="FDTD TFSF Wave Scattering" width="100%"/>
       <br />
       <b>2D TFSF Plane Wave Scattering</b>
       <br />
