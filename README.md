@@ -16,3 +16,6 @@ This repository currently implements the **2D $\text{TM}_z$ core simulation modu
 ![FDTD Wave Scattering Simulation](images/fdtd_simulation.gif)
 
 *Figure 1: Current 2D engine snapshot showing an $E_z$ electric field wave propagating through a Total-Field/Scattered-Field (TFSF) boundary box and scattering off a Perfect Electric Conductor (PEC) target.*
+
+## References
+* **Textbook Reference:** Schneider, John B. *Understanding the Finite-Difference Time-Domain Method*
