@@ -1,1 +1,16 @@
 .vscode/
+# Ignore binary slice snapshots (sim-x.0, sim-y.1, etc.)
+sim-x.*
+sim-y.*
+
+# Ignore any file starting with sim- or sim.
+sim-*
+sim.*
+
+# Common binary data extensions
+*.bin
+*.dat
+*.sim
+
+
+*.result

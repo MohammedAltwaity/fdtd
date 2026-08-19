@@ -7,9 +7,9 @@ void gridInit(Grid *g) {
   int mm, nn, pp;
 
   Type = threeDGrid;   
-  SizeX = 32; // size of domain
-  SizeY = 31;
-  SizeZ = 31;
+  SizeX = 200; // size of domain
+  SizeY = 200;
+  SizeZ = 200;
   MaxTime = 300; // duration of simulation
   Cdtds = 1.0 / sqrt(3.0); // Courant number 
 
