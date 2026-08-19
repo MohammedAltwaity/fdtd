@@ -1,4 +1,3 @@
-# Electromagnetic FDTD Simulation Engine
 
 <!-- ![C Language](https://img.shields.io/badge/Language-C-blue.svg)
 ![Python](https://img.shields.io/badge/Visualization-Python_3.x-green.svg)
@@ -9,9 +8,8 @@ A high-performance computational electromagnetics framework developed in C.
 
 <!-- This repository currently implements the **2D $\text{TM}_z$ core simulation module**, serving as the foundation for an expanding electromagnetic solver built to analyze plane wave scattering, boundary conditions, and complex target geometries. -->
 
----
 
-## Simulation Modules & Visualizations
+
 
 <table>
   <tr>
@@ -33,6 +31,10 @@ A high-performance computational electromagnetics framework developed in C.
 </table>
 
 ---
+
+# Electromagnetic FDTD Simulation Engine
+
+## Simulation Modules & Visualizations
 
 ## Electromagnetic Physics & Field Vectors
 
