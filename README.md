@@ -80,16 +80,14 @@ In the TFSF module, the 1D auxiliary grid injects a uniform plane wave traveling
 │   ├── include/
 │   ├── src/
 │   └── plot_data.py
-    ├── 3d_fdtd_with_tfsf/       # 3D grid simualion
-│   ├
-│   │ 
+├── 3d_fdtd/                 # 3D grid simulation
 │   ├── include/
 │   ├── src/
-│   └── plot_data.py
+│   └── plot_cross_section_data.py
 ├── .gitignore
 └── README.md
+```
 
-
-## referemces
+## References
 
 Understanding the Finite-Difference Time-Domain Method, John B. Schneider, www.eecs.wsu.edu/~schneidj/ufdtd, 2010
