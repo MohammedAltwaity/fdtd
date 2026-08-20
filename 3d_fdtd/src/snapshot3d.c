@@ -50,6 +50,10 @@ void snapshot3d(Grid *g) {
     snprintf(filename, sizeof(filename), "%s-x.%d",
 	     basename, frameX++);
     out = fopen(filename, "wb");
+    if (out == NULL) {
+      perror(filename);
+      exit(-1);
+    }
 
     /* write dimensions to output file */
     dim1 = SizeY; // express dimensions as floats
@@ -71,6 +75,10 @@ void snapshot3d(Grid *g) {
     snprintf(filename, sizeof(filename), "%s-y.%d",
 	     basename, frameY++);
     out = fopen(filename, "wb");
+    if (out == NULL) {
+      perror(filename);
+      exit(-1);
+    }
 
     /* write dimensions to output file */
     dim1 = SizeX - 1; // express dimensions as floats
