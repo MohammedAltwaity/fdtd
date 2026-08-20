@@ -20,7 +20,7 @@ void snapshot3dInit(Grid *g) {
   printf("Enter start time and temporal stride: ");
   scanf(" %d %d", &startTime, &temporalStride);
   printf("Enter the base name: ");
-  scanf(" %s", basename);
+  scanf(" %79s", basename);
 
   return;
 }  /* end snapshot3dInit() */

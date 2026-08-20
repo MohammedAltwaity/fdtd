@@ -30,7 +30,7 @@ void snapshotInit2d(Grid *g) {
   printf("Enter first node, last node, and spatial stride: ");
   scanf(" %d %d %d", &startNodeY, &endNodeY, &spatialStrideY);
   printf("Enter the base name: ");
-  scanf(" %s", basename);
+  scanf(" %79s", basename);
 
   return;
 }
