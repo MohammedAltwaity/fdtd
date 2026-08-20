@@ -14,3 +14,5 @@ sim.*
 
 
 *.result
+# Compiled binary produced by: gcc -Iinclude src/*.c -o result
+result
