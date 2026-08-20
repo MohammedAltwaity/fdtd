@@ -90,7 +90,11 @@ void snapshot2d(Grid *g) {
       (Time - startTime) % temporalStride == 0) {
     snprintf(filename, sizeof(filename), "%s.%d",
 	     basename, frame++);
-    out = fopen(filename, "wb");  
+    out = fopen(filename, "wb");
+    if (out == NULL) {
+      perror(filename);
+      exit(-1);
+    }
 
     /* write dimensions to output file -- 
      * express dimensions as floats */

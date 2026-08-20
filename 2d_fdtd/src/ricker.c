@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
+/* M_PI is not in ISO C, so it is missing under -std=c99 / -std=c11
+ * and on MSVC. Provide it if the platform did not. */
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 #include "fdtd-macro-tmz.h"
 #include "ezinc.h"
 

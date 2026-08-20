@@ -1,5 +1,5 @@
-#ifndef _FDTD_MACRO_TMZ_H
-#define _FDTD_MACRO_TMZ_H
+#ifndef _FDTD_MACRO_TEZ_H
+#define _FDTD_MACRO_TEZ_H
 
 #include "fdtd-grid1.h"    
 
@@ -65,4 +65,4 @@
 #define Cdtds          CdtdsG(g)
 #define Type           TypeG(g)       
 
-#endif   /* matches #ifndef _FDTD_MACRO_TMZ_H */
+#endif   /* matches #ifndef _FDTD_MACRO_TEZ_H */

@@ -10,7 +10,8 @@ from matplotlib.animation import FuncAnimation
 # ==============================================================================
 BASENAME = "sim-x"         # Snapshot prefix ("sim-x" or "sim-y")
 FIXED_AXIS = "X"           # Fixed plane coordinate ('X' or 'Y')
-FIXED_COORD_VAL = 50       # Grid node index of the fixed slice plane
+FIXED_COORD_VAL = 99       # Slice plane index: sim-x is (SizeX-1)/2,
+                           # sim-y is SizeY/2 -- see snapshot3d.c
 FIELD_NAME = "$E_x$"       # Field component recorded by snapshot3d
 FRAME_INTERVAL_MS = 300    # Playback speed (milliseconds per frame)
 DYNAMIC_AUTOSCALE = True   # Rescale color limits based on peak field value
@@ -33,6 +34,13 @@ def load_frame(filename):
         
         # Reshape into 2D grid (dim2 rows = Z, dim1 cols = X or Y)
         field = data.reshape((dim2, dim1))
+
+        # snapshot3d writes rows from pp = SizeZ-1 down to 0, so the first row
+        # is the TOP of the grid. Flip it so origin='lower' puts Z=0 at the
+        # bottom. Without this the Z axis is rendered upside-down (invisible on
+        # a symmetric dipole, wrong as soon as the grid is not Z-symmetric).
+        field = np.flipud(field)
+
         return field, dim1, dim2
 
 
