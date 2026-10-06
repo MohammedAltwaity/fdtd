@@ -3,6 +3,8 @@
 ![Python](https://img.shields.io/badge/Visualization-Python_3.x-green.svg)
 ![Status](https://img.shields.io/badge/Status-In_Active_Development-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg) -->
+> 🚧 **Project Status:** Under Active Development  
+> The core numerical architecture and solver formulations in this repository are based on *Understanding the Finite-Difference Time-Domain Method* by **John B. Schneider** ([ufdtd](https://www.eecs.wsu.edu/~schneidj/ufdtd/)).
 
 A high-performance computational electromagnetics framework developed in C.
 
